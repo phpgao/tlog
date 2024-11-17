@@ -99,7 +99,7 @@ func (f *FileWriterFactory) Setup(name string, dec PluginDecoder) error {
 	}
 	return nil
 }
-
+ 
 func (f *FileWriterFactory) setupConfig(decoder *Decoder) error {
 	cfg := &OutputConfig{}
 	if err := decoder.Decode(&cfg); err != nil {

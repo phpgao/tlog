@@ -277,7 +277,8 @@ func (l *zapLog) With(fields ...Field) Logger {
 
 	return &zapLog{
 		levels: l.levels,
-		logger: l.logger.With(zapFields...)}
+		logger: l.logger.With(zapFields...),
+	}
 }
 
 func getLogMsg(args ...interface{}) string {

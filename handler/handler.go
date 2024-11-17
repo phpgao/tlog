@@ -38,7 +38,7 @@ func newDefaultRes() map[string]interface{} {
 
 // ErrorOutput Unified error output.
 func ErrorOutput(w http.ResponseWriter, error string, code int) {
-	var ret = newDefaultRes()
+	ret := newDefaultRes()
 	ret[ReturnErrCodeParam] = code
 	ret[ReturnMessageParam] = error
 
@@ -84,7 +84,7 @@ func (h LevelHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var ret = newDefaultRes()
+	ret := newDefaultRes()
 	if r.Method == http.MethodGet {
 		ret["level"] = getLevel(logger, output)
 		_ = json.NewEncoder(w).Encode(ret)

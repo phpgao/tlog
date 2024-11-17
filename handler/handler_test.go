@@ -13,5 +13,4 @@ func TestRegisterHandler(t *testing.T) {
 func TestRegisterHandlerWithPath(t *testing.T) {
 	mux := http.NewServeMux()
 	RegisterHandlerWithPath(mux, "/")
-	http.ListenAndServe(":8080", mux)
 }
